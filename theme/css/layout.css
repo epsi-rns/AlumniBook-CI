@@ -1,0 +1,84 @@
+/* -- epsi stuff -- */
+
+/* common epsi */
+body { background: #FFFF80; }
+#maindoc	{ background: #FFF; }
+#leftdoc	{ background: transparent url(../img/common/left-column.gif) repeat-y; }
+#rightdoc	{ background: #FFF url(../img/common/right-column.gif) repeat-y top right; }
+#footbar	{ background: transparent url(../img/common/foot-bar.gif) repeat-x bottom left; }
+#footleft	{ background: transparent url(../img/common/foot-left.gif) no-repeat bottom left; }
+#footright	{ background: transparent url(../img/common/foot-right.gif) no-repeat bottom right; }
+#search		{ background: url(../img/common/back_search.gif) right top no-repeat; }
+
+/* Layout */
+
+td.sidespacer	{ width: 8%; }
+#sidespacer	{ width: 25px; }
+#leftcol	{ width: 152px; margin-top: 22px; }	
+#rightcol	{ width: 180px; margin-top: 7px;} 
+#pathway	{ position: relative; left: -152px; }	
+#leftdoc	{ width: 152px;	vertical-align : top;}
+#rightdoc	{ 		vertical-align : top;}
+#maindoc		{ 		vertical-align : top;	 padding-left: 10px;	padding-right: 10px;}
+#minimalwidth	{ width: 784px; }
+#minimalheader	{ width: 734px; }  /*	478 + 250 + 6 = 784 - 2*25	*/
+#minimalcontent	{ width: 382px; }  /*	734 - 180 - 152 -2*10		*/
+#minimalright	{ width: 10px; }
+#sitename	{ width: 468px;	height	: 60px; 		background: #FFF; }
+#slogan		{ width: 100%;	height	: 10px; 		background: #FFF; }
+#bodyfooter		{ height: 20px; }
+
+/* based on marc */
+#header		{ height: 116px; }
+#top-top	{ width: 100%;	height: 30px;			background: transparent; }
+#topmenu		{ width: 576px;	height: 20px;	float: right;	}	/* 734 - 148 -10 */
+#search		{ width: 148px;	height: 28px;	float: right;	padding-left: 10px;	padding-top: 2px; } 
+#top-bottom	{ width: 250px;	height: 80px;	float: left;	background: transparent; }
+#banner		{ width: 478px;	height: 69px;	float: right;	padding-left: 6px;	padding-top: 6px; }
+#pathway	{ 		height: 19px;			padding-left: 20px;	padding-top: 5px; }
+#accessibility	{ position: absolute;	left: -2000px;	top: -2000px;	display: none; }
+
+/* modules */
+#user1	{ width: 49%;	float: left; }
+#user2	{ width: 49%;	float: right; }
+#user3	{ width: 100%; }
+
+
+/* Layout */
+
+
+
+/* Modules */
+
+#leftcol div.module		{ width: 152px;	background: transparent url(../img/module/middle.jpg) repeat-y;	margin-bottom: 10px; }
+#leftcol div.module div		{ width: 152px; background: transparent url(../img/module/top.jpg) top left no-repeat; }
+#leftcol div.module div div	{ width: 152px; background: transparent url(../img/module/bottom.jpg)  bottom left no-repeat; }
+#leftcol div.module div div div	{ width: 137px; }
+
+#rightcol div.module		{ width: 177px; background: transparent url(../img/module/middle_wide.jpg) repeat-y; margin-bottom: 10px; }
+#rightcol div.module div		{ width: 177px; background: transparent url(../img/module/top_wide.jpg) top left no-repeat; }
+#rightcol div.module div div	{ width: 177px; background: transparent url(../img/module/bottom_wide.jpg)  bottom left no-repeat; }
+#rightcol div.module div div div	{ width: 162px; }
+
+#leftcol div.module div div div div, 
+#rightcol div.module div div div div {
+padding: 0px;
+margin: 0px;
+}
+
+#leftcol div.module_menu div div div,
+#rightcol div.module_menu div div div,
+#leftcol div.module div div div,
+#rightcol div.module div div div{
+padding-left: 5px;
+padding-right: 10px;
+padding-top: 10px;
+background: transparent;
+padding-bottom: 10px;
+font-size: 10px;
+}
+
+/* Module specific */
+
+#leftcol div.module div div div div.syndicate		{ background: transparent;	width: 137px;	margin: 0px;	padding: 0px; }
+#leftcol div.module div div div div.syndicate div	{ background: transparent;	width: 137px;	margin: 0px;	padding: 0px; }

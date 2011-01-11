@@ -1,0 +1,20 @@
+#slogan { color : #6685A3; }
+
+/* blue marc */
+#verlauf	{ background: url(../img/blue/back_verlauf.jpg) repeat-x top; }
+#banner		{ background: url(../img/blue/banner_back.jpg) no-repeat; }
+
+#maindoc div.moduletable h3	{ background: url(../img/blue/module_head_back.jpg) repeat-x; } 
+ul#mainlevel-nav li		{ background: url(../img/blue/headmenu/left.gif) no-repeat bottom left; }
+ul#mainlevel-nav li a		{ background: url(../img/blue/headmenu/right.gif) no-repeat bottom right; }
+ul#mainlevel-nav li:hover	{ background: url(../img/blue/headmenu/left_hover.gif) no-repeat bottom left; }
+ul#mainlevel-nav li a:hover	{ background: url(../img/blue/headmenu/right_hover.gif) no-repeat bottom right; }
+
+a.sublevel#active_menu,
+a.sublevel:hover	{ background: #F1F1F1 url(../img/blue/submenu_back.gif) left center no-repeat; }
+a.sublevel		{ background: url(../img/blue/submenu_back.gif) left center no-repeat; }
+a.readon:hover		{ background: #EEEEEE url(../img/blue/readon.gif) no-repeat left;}
+a.readon		{ background: url(../img/blue/readon.gif) no-repeat left; }
+
+table.contentpane ul li	{ background: url(../img/blue/readon2.gif) no-repeat left top; }
+.blog_more ul li		{ background: url(../img/blue/readon.gif) no-repeat left; }

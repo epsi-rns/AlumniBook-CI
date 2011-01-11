@@ -1,0 +1,132 @@
+/* Modules */
+div.module_menu h3 { background: url(../img/makara-s.gif) no-repeat top right; }
+
+div.module h3, div.module_menu h3 {
+	font-size: 13px;
+	font-weight: bold;
+	width: 130px;
+	margin: 0px;
+	padding: 0px;
+	margin-bottom: 5px;
+}
+
+/* Main Menu(s) */
+
+a.mainlevel, a.sublevel {
+	display: block;
+	margin-bottom: 2px;
+	text-decoration: none;
+	font-weight: normal;
+	border-right: 4px solid #CACACA; 
+	voice-family:"\"}\""; /* Box Model fix */
+	voice-family:inherit;
+}
+
+a.mainlevel {
+	font-size: 10px;
+	padding-left: 4px;
+	line-height: 26px;
+}
+
+a.mainlevel:hover, a.mainlevel#active_menu {
+	background: #F1F1F1;
+	text-decoration: none;
+}
+
+a.sublevel {
+	padding: 0px;
+	margin: 0px;
+	font-size: 10px;
+	padding-left: 12px;
+	line-height: 20px;
+}
+
+
+
+a.sublevel:hover, a.sublevel#active_menu {
+	text-decoration: none;
+	width: 139px;
+	voice-family:"\"}\""; /* Box Model fix */
+	voice-family:inherit;
+}
+
+
+/* --- */
+
+ul.menu li { background: url(../img/icon/li.gif) no-repeat 0px 5px; }
+ul.menu li ul li { background: url(../img/icon/puce_link.gif) no-repeat 0px 5px; }
+ul.menu li:hover, ul.menu li ul li:hover { background: #F1F1F1 url(../img/icon/arrow.gif) no-repeat 0px 5px; }
+ul.menu li a:hover, ul.menu li ul li a:hover { 
+  text-decoration: blink;
+  text-transform: uppercase;  
+  border-bottom: thin dashed;
+}
+
+ul.menu, ul.menu ul, table.contentpane ul {
+margin: 0px;
+padding: 0px;
+list-style: none;
+}
+
+ul.menu li, table.contentpane ul li{
+padding: 0px;
+margin: 0px;
+padding-left: 15px;
+}
+
+ul.menu {
+  font-size: 10px;
+  line-height: 20px;  
+  display: block;
+  margin-bottom: 2px;
+  padding-right: 8px; /* --fix-- */
+}
+
+ul.menu li {
+  margin-right: -8px; /* --fix-- */
+}
+
+ul.menu li a, ul.menu li#current ul li a { font-weight: normal; }
+ul.menu li#current a { font-weight: bold; }
+
+ul.menu a {
+  text-decoration: none;
+  font-weight: normal;  
+}   
+
+ul.menu li ul li{ margin: 0px; padding-left: 25px; }
+
+/* --- Normal --- */
+
+#leftcol	{ width: 152px; margin-top: 22px; }
+/*#rightcol	{ width: 180px; margin-top: 7px;}*/ 
+#pathway	{ position: relative; left: -152px; }
+#leftdoc	{ width: 152px;	vertical-align : top;}
+#minimalcontent	{ width: 382px; }  /*	734 - 180 - 152 -2*10		*/
+
+/* Modules */
+
+div.module h3, div.module_menu h3 { width: 130px; }
+
+ul.menu { width: 135px; }
+
+a.mainlevel { width: 135px; /*width: 143px;*/ }
+a.sublevel { width: 123px; /* width: 139px; */ }
+a.sublevel:hover, a.sublevel#active_menu { width: 123px; /* width: 139px; */ }
+
+/* Opera5-Fix-fix ;-) */
+html>body a.mainlevel {width:135px;} 
+html>body a.sublevel {width:123px;} 
+html>body a.sublevel:hover, a.sublevel#active_menu { width: 123px; }
+
+#leftcol div.module		{ width: 152px;	background: transparent url(../img/module/middle.jpg) repeat-y;	margin-bottom: 10px; }
+#leftcol div.module div		{ width: 152px; background: transparent url(../img/module/top.jpg) top left no-repeat; }
+#leftcol div.module div div	{ width: 152px; background: transparent url(../img/module/bottom.jpg)  bottom left no-repeat; }
+#leftcol div.module div div div	{ width: 137px; }
+
+/* Modules -- Joomla Compatibles*/
+
+#leftcol div.module_menu		{ width: 152px;	background: transparent url(../img/module/middle.jpg) repeat-y;	margin-bottom: 10px; }
+#leftcol div.module_menu div		{ width: 152px; background: transparent url(../img/module/top.jpg) top left no-repeat; }
+#leftcol div.module_menu div div	{ width: 152px; background: transparent url(../img/module/bottom.jpg)  bottom left no-repeat; }
+#leftcol div.module_menu div div div	{ width: 137px; }

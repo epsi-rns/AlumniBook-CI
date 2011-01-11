@@ -1,0 +1,21 @@
+# objective: 
+# to create a static html translated from dynamic php with parameters,
+# to make your site search engine friendly or to make a softcopy on a cd-rom
+
+# what to do:
+# link this as .htaccess, U should enable override directive on your apache.
+# so you can grab your site as static site using any downloader:
+# example:   epsi@blewah:~$ wget -r -x -np -nc http://localhost/yellowbook/
+# don't forget to copy /i/* themes/i/* contain images used by css
+
+RewriteEngine on
+RewriteCond $1 !^(index\.php|js|xajax_js)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*)$ index.php/$1	
+
+# Note:
+# WAMP Settings: Same as above
+# XAMPP Settings for windows: Add relative url
+#   example: /yourpath/index.php/$1

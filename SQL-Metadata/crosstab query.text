@@ -1,0 +1,81 @@
+Haloween...eh halo Win!,
+
+On Tuesday, September 20, 2005, 5:52:11 PM, win wrote:
+
+ 
+
+>> saya punya table
+>> ======================================
+>> kode_buku | sub_buku | golongan | Jurusan
+>> ======================================
+>> 001           | 01            | 01          | Math
+>> 002           | 01            | 02          | Fis
+>> 001           | 02            | 01          | Kim
+>> 001           | 03            | 01          | Math
+
+ 
+
+>> gimna syntax sqlnya untuk  menampilkan
+
+ 
+
+>> =======================================
+>> golongan | Jumlah_total | Math | fis | Kim |
+>> =======================================
+>> 01          | 3                  | 2       | 0  | 1
+>> 02          | 1                  | 0       |1   | 0
+
+
+Kalau gampang kalau DB-nya support crosstab query. Namun meskipun DB
+kita tidak support crosstab, kita bisa lakukan seperti di bawah ini:
+
+<code>
+select golongan, sum(1) as jumlah_total,
+       sum( case jurusan
+                 when 'Math' then 1
+                 else 0
+            end
+          ) as Math,
+       sum( case jurusan
+                 when 'Fis' then 1
+                 else 0
+            end
+          ) as Fis,
+       sum( case jurusan
+                 when 'Kim' then 1
+                 else 0
+            end
+          ) as Fis,
+       from daftar_buku
+       group by golongan
+       order by golongan;
+</code>
+
+Dalam prakteknya, tentu saja Jurusan tidak bisa dihardcoded
+seperti di atas. Approach yang bisa diambil adalah ambil record-record
+jurusan terlebih dahulu. Kemudian querynya dibuild secara dinamis:
+
+<code>
+QJurusan.sql.text := 'select KODE from daftar_jurusan order by 1';
+QJurusan.Open;
+//
+QReport.sql.text := 'select golongan, sum(1) as jumlah_total'
+QJurusan.First;
+while not QJurusan.Eof do begin
+      QReport.sql.text
+       := QReport.sql.text
+            + ',sum( case jurusan'
+                   + ' when ' + QuotedStr(QJurusan.Fields[0].AsString)
+                             + ' then 1'
+                   + ' else 0'
+                  + 'end) as ' +QJurusan.Fields[0].AsString
+  QJurusan.Next
+end;
+QReport.sql.text := QReport.sql.text
+ + ' from daftar_buku group by 1 order by 1';
+</code>
+
+PS,OOT: nggak tahu apakah tag <code> ini bisa membantu agar code yang
+didisplaykan di webnya yahoogroups nggak jadi amburadul.
+
+-- Bambang P. 

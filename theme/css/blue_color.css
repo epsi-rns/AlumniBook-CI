@@ -1,0 +1,12 @@
+a.mainlevel, a.sublevel, table.contentpane td.contentheading  
+	{ color	: #002E61; }
+
+a, #search .inputbox, #search .button
+	{ color	: #002E61; }
+
+ul.menu li:hover, ul.menu li ul li:hover,
+a.mainlevel:hover, a.mainlevel#active_menu, a.sublevel:hover, a.sublevel#active_menu
+	{ border-right	: 4px solid #6685A3; }
+
+.contentheading, .componentheading, div.module h3, div.module_menu h3
+	{ color	: #002E61; border-bottom : 1px solid #002E61; }

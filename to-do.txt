@@ -1,0 +1,7 @@
+To do:
+- simplify (just one): if ( ... && ... && ... )
+- total link followed by source
+- ctcomy filter by source
+- Search form on alumni frontpage
+
+- Sisanya menunggu struktur baru.
