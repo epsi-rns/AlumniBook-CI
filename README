@@ -1,4 +1,4 @@
-This old project using CodeIgniter 1.6.1
+This old project is using CodeIgniter 1.6.1
 Therefore you need PHP <= 5.2 ,
 You may need to downgrade PHP in your system.
 
@@ -11,3 +11,26 @@ in other framework for learning purpose.
 Have fun
 
 ~epsi @rizqi
+
+---------------------
+Firebird Instruction
+
+There is a sample databse with fixturesthat you can use.
+First, extract sample database,
+then add aliases in your firebird.
+
+$ gzip -d YellowBook.sample.fdb.gz
+
+Add aliases in 
+/etc/firebird/2.5/aliases.conf
+IluniBook = /var/www/your_directory/YellowBook.sample.fdb
+
+$ /etc/init.d/firebird2.5-super restart
+---------------------
+demo login:
+  admin:
+    user: admin
+    pass: admin
+  guest:
+    user: iluni
+    pass: iluni
