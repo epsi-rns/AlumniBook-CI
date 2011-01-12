@@ -1,3 +1,24 @@
+This old AlumniBook Project is a part of 
+Buku Alumni Project ILUNI-FTUI.
+
+1. Starting from Questionnaire,
+2. Process 'em with information system
+-- using PHP as front end and Delphi for data entry
+3. And our final product is a book,
+-- basically a printed version of this database
+
+The book project is initiated by Aswil Nazir,
+The questionnaire made by Zaenal Fanani,
+Data collecting worked by Ade Tauhid.
+
+I only contribute a small part,
+it is the information system.
+
+The original name is YellowBook.
+I've renamed it to AlumniBook
+since code rewrite using CI.
+
+---------------------
 This old project is using CodeIgniter 1.6.1
 Therefore you need PHP <= 5.2 ,
 You may need to downgrade PHP in your system.
